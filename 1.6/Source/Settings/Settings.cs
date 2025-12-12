@@ -6,7 +6,6 @@ namespace OOFlavorPack
 {
     public class Settings : ModSettings
     {
-        internal static bool enablePsylinkRemoval;
         public bool psylinkRemoval;
         public override void ExposeData()
         {

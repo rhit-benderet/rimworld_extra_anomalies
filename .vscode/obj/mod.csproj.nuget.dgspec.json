@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\OceanicOxen Flavor Pack\\.vscode\\mod.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_flavor_pack\\.vscode\\mod.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\OceanicOxen Flavor Pack\\.vscode\\mod.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_flavor_pack\\.vscode\\mod.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\OceanicOxen Flavor Pack\\.vscode\\mod.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_flavor_pack\\.vscode\\mod.csproj",
         "projectName": "OceanicOxen.FlavorPack",
-        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\OceanicOxen Flavor Pack\\.vscode\\mod.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_flavor_pack\\.vscode\\mod.csproj",
         "packagesPath": "C:\\Users\\benderet\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\OceanicOxen Flavor Pack\\.vscode\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\rimworld_flavor_pack\\.vscode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benderet\\AppData\\Roaming\\NuGet\\NuGet.Config",
