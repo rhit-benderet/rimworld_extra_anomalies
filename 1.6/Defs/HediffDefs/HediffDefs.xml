@@ -29,9 +29,11 @@
 				<minSeverity>1</minSeverity>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.0</InjuryHealingFactor>
 				</statOffsets>
                 <statFactors>
 					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>3.0</InjuryHealingFactor>
 				</statFactors>
 			</li>
 			<li>
@@ -39,29 +41,47 @@
 				<minSeverity>2</minSeverity>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.0</InjuryHealingFactor>
+					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</statOffsets>
                 <statFactors>
 					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>3.0</InjuryHealingFactor>
 				</statFactors>
 			</li>
 			<li>
 				<label>Nullifying</label>
 				<minSeverity>3</minSeverity>
+        		<painFactor>0</painFactor>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.0</InjuryHealingFactor>
+					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</statOffsets>
                 <statFactors>
 					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>3.0</InjuryHealingFactor>
 				</statFactors>
 			</li>
 			<li>
 				<label>Transforming</label>
 				<minSeverity>4</minSeverity>
+				<painFactor>0</painFactor>
+				<regeneration>50</regeneration>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.0</InjuryHealingFactor>
+					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</statOffsets>
                 <statFactors>
 					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+					<InjuryHealingFactor>3.0</InjuryHealingFactor>
 				</statFactors>
 			</li>
 		</stages>
