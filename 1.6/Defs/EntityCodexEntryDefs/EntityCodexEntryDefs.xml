@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<EntityCodexEntryDef>
+		<defName>EA_EntityCodexEntry_AnomalySyringe</defName>
+		<label>anomalous syringe</label>
+		<category>Advanced</category>
+		<uiIconPath>UI/CodexEntries/EA_AnomalySyringe</uiIconPath>
+		<useDescriptionFrom>EA_AnomalySyringe</useDescriptionFrom>
+		<linkedThings>
+			<li>EA_AnomalySyringe</li>
+		</linkedThings>
+		<provocationIncidents>
+			<li>EA_IncidentDef_AnomalySyringeSpawn</li>
+		</provocationIncidents>
+		<orderInCategory>1300</orderInCategory>
+	</EntityCodexEntryDef>
+</Defs>

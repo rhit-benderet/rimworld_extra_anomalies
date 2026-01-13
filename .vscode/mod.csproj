@@ -33,5 +33,15 @@
 		<Reference Include="../../../../../../steamapps/workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll">
 			<Private>False</Private>
 		</Reference>
+
+		<!-- *Uncomment for Anomalies Expected*-->
+		<Reference Include="../../../../../../steamapps/workshop/content/294100/3240752689/1.6/Assemblies/Anomalies Expected.dll">
+			<Private>False</Private>
+		</Reference>
+
+		<!-- *Uncomment for Anomalies Expected Addon*-->
+		<Reference Include="../../../../../../steamapps/workshop/content/294100/3251944598/Assemblies/AEAddon.dll">
+			<Private>False</Private>
+		</Reference>
 	</ItemGroup>
 </Project>

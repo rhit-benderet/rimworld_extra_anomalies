@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef>
+		<defName>EA_AnomalySyringe</defName>
+		<label>anomalous syringe</label>
+		<description>A medical syringe filled with a viscous black fluid.</description>
+		<category>Item</category>
+		<thingClass>AnomaliesExpected.ThingWithComps_AE</thingClass>
+		<genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_AnomalySyringe</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-5</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ItemsAnomalies</li>
+		</thingCategories>
+		<hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+		<comps>
+			<li Class="CompProperties_Interactable">
+				<compClass>ExtraAnomalies.Comp_AnomalousSyringe</compClass>
+				<activeTicks>1</activeTicks>
+				<cooldownTicks>3000</cooldownTicks>
+				<ticksToActivate>250</ticksToActivate>
+				<activateTexPath>Things/Item/Special/EA_AnomalySyringe</activateTexPath>
+        
+				<activateLabelString>Inject</activateLabelString>
+				<activateDescString>Make someone inject the syringe into their veins.</activateDescString>
+				<guiLabelString>Choose who should inject this.</guiLabelString>
+				<jobString>inject</jobString>
+				<activatingStringPending>injecting {0}</activatingStringPending>
+				<activatingString>injecting {0}: {1}s</activatingString>
+				<onCooldownString>regenereating</onCooldownString>
+
+				<fleckOnUsed>PsycastAreaEffect</fleckOnUsed>
+				<fleckOnUsedScale>3</fleckOnUsedScale>
+				<soundActivate>PsychicAnimalPulserCast</soundActivate>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>true</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Advanced</knowledgeCategory>
+				<anomalyKnowledge>1.5</anomalyKnowledge>
+				<minMonolithLevelForStudy>2</minMonolithLevelForStudy>
+				<showToggleGizmo>true</showToggleGizmo>
+			</li>
+			<li Class="CompProperties_StudyUnlocks">
+				<compClass>AnomaliesExpected.CompAEStudyUnlocks</compClass>
+				<studyNotes>
+					<li Class="AnomaliesExpected.AEStudyNote">
+						<AnomalyLabel>endless syringe</AnomalyLabel>
+						<AnomalyDesc>A medical syringe filled with a viscous black liquid. \n\nThe liquid regenerates after being expelled.\n\nClassified as Class-0 (Safe) anomaly.</AnomalyDesc>
+						<threshold>0.01</threshold>
+						<label>#1/3 Anomalous syringe study report</label>
+						<text>Properties of the Syringe's liquid\n\nSubject: {PAWN_nameDef}\n\nAbstract:\nThe Anomalous Syringe appears to be capable of producing the viscous black liquid contained within it. After a couple minutes outside the syringe, the liquid appears to vanish. When mixed with blood, human or animal, the liquid takes significantly longer to dissipate, perhaps injecting it into a living creatures could lead to fruitful results.\n\nObservations:\nSubject was presented with the anomalous syringe. With considerable effort {PAWN_nameDef} was able to eject the liquid from the syringe.\nSubject then pulled back on the syringe and liquid reappeared in the syringe.\n{PAWN_nameDef} observed that the liquid vanished after 4 minutes outside the syringe, however upon mixing it with fresh blood it stayed for a couple hours.\n\nDiscussion:\nThe Anomalous Syringe has been classified as Class-0 (Safe) anomaly.\n\nRecommendations:\nInjection of the syringe into a human or animal is necessary in order to determine how it reacts to the body.</text>
+						<ThreatClass>0</ThreatClass>
+						<isSyncWithDB>true</isSyncWithDB>
+					</li>
+				</studyNotes>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_StudyNotes</li>
+		</inspectorTabs>
+	</ThingDef>
+</Defs>

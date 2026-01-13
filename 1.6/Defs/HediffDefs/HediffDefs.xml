@@ -1,0 +1,69 @@
+<Defs>
+    <HediffDef>
+        <defName>Hediff_EAAnomalousSyringe</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>mysterious virus</label>
+		<description>The syringe seems to have infected the user with a strange virus. It is very territorial and will actively fight off other infections.</description>
+		<initialSeverity>0.01</initialSeverity>
+		<lethalSeverity>5.0</lethalSeverity>
+		<maxSeverity>5.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.5</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Purging Disease</label>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+				</statOffsets>
+                <statFactors>
+					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<label>Coagulating</label>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+				</statOffsets>
+                <statFactors>
+					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<label>Hardening</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+				</statOffsets>
+                <statFactors>
+					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<label>Nullifying</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+				</statOffsets>
+                <statFactors>
+					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<label>Transforming</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
+				</statOffsets>
+                <statFactors>
+					<ImmunityGainSpeed>10.0</ImmunityGainSpeed>
+				</statFactors>
+			</li>
+		</stages>
+    </HediffDef>
+</Defs>

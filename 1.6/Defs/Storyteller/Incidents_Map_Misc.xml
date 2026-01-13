@@ -1,0 +1,29 @@
+<Defs>
+    <IncidentDef>
+		<defName>EA_IncidentDef_AnomalySyringeSpawn</defName>
+		<label>anomalous syringe</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>AnomaliesExpected.IncidentWorker_DeployThingFromOrbit</workerClass>
+		<letterLabel>Found anomalous syringe</letterLabel>
+		<letterText>Your colonist noticed some object falling from the sky nearby. At close inspection it seems like a medical syringe.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<earliestDay>30</earliestDay>
+		<baseChance>0.2</baseChance>
+		<requireColonistsPresent>True</requireColonistsPresent>
+		<minAnomalyThreatLevel>2</minAnomalyThreatLevel>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="AnomaliesExpected.IncidentDefExtension">
+				<DeployableThingDefs>
+					<li>EA_AnomalySyringe</li>
+				</DeployableThingDefs>
+				<ActiveDropPodDef>AE_ActiveDropPodAnomaly</ActiveDropPodDef>
+				<SkyfallerDef>AE_AnomalyIncoming</SkyfallerDef>
+				<ChanceFactorPowPerBuilding>0</ChanceFactorPowPerBuilding>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+</Defs>
