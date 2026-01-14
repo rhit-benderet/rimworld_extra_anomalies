@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<ExtraAnomalies.Transformation.Transformation_Letter>The {2} has finished mutating {0}, transforming them into a viscious {1}.</ExtraAnomalies.Transformation.Transformation_Letter>
+    <ExtraAnomalies.Transformation>Unnatural Transformation</ExtraAnomalies.Transformation>
+</LanguageData>

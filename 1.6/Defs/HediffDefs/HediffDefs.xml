@@ -2,21 +2,29 @@
     <HediffDef>
         <defName>Hediff_EAAnomalousSyringe</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>mysterious virus</label>
+		<label>phthoravirus</label>
 		<description>The syringe seems to have infected the user with a strange virus. It is very territorial and will actively fight off other infections.</description>
 		<initialSeverity>0.01</initialSeverity>
-		<lethalSeverity>5.0</lethalSeverity>
 		<maxSeverity>5.0</maxSeverity>
 		<isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>0.5</severityPerDay>
+				<severityPerDay>0.25</severityPerDay>
 				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_Transformation">
+				<transformIntoDef>
+					<li>Revenant</li>
+					<li>Fingerspike</li>
+					<li>Sightstealer</li>
+					<li>Trispike</li>
+				</transformIntoDef>
+				<revealTransformSeverity>4</revealTransformSeverity>
 			</li>
 		</comps>
 		<stages>
 			<li>
-				<label>Purging Disease</label>
+				<label>Purging</label>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
 				</statOffsets>
