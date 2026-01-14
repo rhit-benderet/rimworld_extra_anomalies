@@ -14,11 +14,21 @@
 			</li>
 			<li Class="ExtraAnomalies.HediffCompProperties_Transformation">
 				<transformIntoDef>
-					<li>Revenant</li>
 					<li>Fingerspike</li>
 					<li>Sightstealer</li>
 					<li>Trispike</li>
+					<li>Toughspike</li>
+					<li>Bulbfreak</li>
+					<li>Gorehulk</li>
 				</transformIntoDef>
+				<transformIntoWeight>
+					<li>10</li>
+					<li>20</li>
+					<li>10</li>
+					<li>30</li>
+					<li>1</li>
+					<li>30</li>
+				</transformIntoWeight>
 				<revealTransformSeverity>4</revealTransformSeverity>
 			</li>
 		</comps>

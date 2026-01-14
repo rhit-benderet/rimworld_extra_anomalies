@@ -13,6 +13,7 @@ namespace ExtraAnomalies
 		} 
         
         public List<PawnKindDef> transformIntoDef;
+        public List<float> transformIntoWeight;
 		public float revealTransformSeverity;
 	}
 }

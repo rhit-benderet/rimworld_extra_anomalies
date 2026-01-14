@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -35,7 +36,8 @@ namespace ExtraAnomalies
 		{
             Pawn pawn = this.parent.pawn;
             
-            PawnKindDef heldPawnKind = this.Props.transformIntoDef.RandomElement();
+            List<PawnKindDef> lst = this.Props.transformIntoDef;
+            PawnKindDef heldPawnKind = lst.RandomElementByWeight(p => Props.transformIntoWeight[lst.IndexOf(p)]);
             Faction ofEntities = Faction.OfEntities;
             PawnGenerationContext context = PawnGenerationContext.NonPlayer;
             float? fixedBiologicalAge = new float?(0f);
