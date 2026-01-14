@@ -43,7 +43,7 @@
 				</statFactors>
 			</li>
 			<li>
-				<label>Coagulating</label>
+				<label>Repairing</label>
 				<minSeverity>1</minSeverity>
 				<statOffsets>
 					<ImmunityGainSpeed>1.0</ImmunityGainSpeed>
