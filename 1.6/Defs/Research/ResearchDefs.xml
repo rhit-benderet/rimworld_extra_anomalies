@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchTabDef>
+		<defName>ExtraAnomalies</defName>
+		<label>Extra Anomalies</label>
+		<generalTitle>Extra Anomalies research projects</generalTitle>
+		<generalDescription>Expansion of void-related technologies by studying unnatural entities.\n\nIt uses logic of anomaly research projects.\n\nProgress shown on Anomaly tab.</generalDescription>
+		<visibleByDefault>false</visibleByDefault>
+		<minMonolithLevelVisible>1</minMonolithLevelVisible>
+    </ResearchTabDef>
+
+    <ResearchProjectDef>
+        <defName>EA_ModifiedInfluenzaResearch</defName>
+        <label>modified influenza syringe</label>
+        <description>Learn how to create a syringe containing a modified strain of influenza. The strain will attack the phthoravirus, delaying the next mutation, however it cannot ever reverse a mutation.</description>
+        <tab>ExtraAnomalies</tab>
+        <requiredAnalyzed>
+            <li>EA_ResearchNotesMI</li>
+        </requiredAnalyzed>
+        <knowledgeCost>5</knowledgeCost>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+</Defs>

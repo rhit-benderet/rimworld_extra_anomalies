@@ -6,11 +6,21 @@
 		<description>The syringe seems to have infected the user with a strange virus. It is very territorial and will actively fight off other infections.</description>
 		<initialSeverity>0.01</initialSeverity>
 		<maxSeverity>5.0</maxSeverity>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
 		<isBad>true</isBad>
+		<isInfection>true</isInfection>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>0.25</severityPerDay>
 				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_Mutating">
+				<mutationSeverities>
+					<li>1.0</li>
+					<li>2.0</li>
+					<li>3.0</li>
+					<li>4.0</li>
+				</mutationSeverities>
 			</li>
 			<li Class="ExtraAnomalies.HediffCompProperties_Transformation">
 				<transformIntoDef>
@@ -104,4 +114,93 @@
 			</li>
 		</stages>
     </HediffDef>
+
+	<HediffDef>
+		<defName>Hediff_EAModifiedInfluenza</defName>
+		<label>modified influenza</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>0.001</initialSeverity>
+		<isInfection>true</isInfection>
+		<description>A non-lethal long lasting version of the influenza virus. It has been modified to attack the phthoravirus slowly reducing its severity.</description>
+		<makesSickThought>true</makesSickThought>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.0</severityPerDayNotImmune>
+				<immunityPerDaySick>0.025</immunityPerDaySick>
+				<severityPerDayImmune>-7.0</severityPerDayImmune>
+				<immunityPerDayNotSick>-10.0</immunityPerDayNotSick>
+			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_FightInfection">
+				<infectionDef>Hediff_EAAnomalousSyringe</infectionDef>
+				<severityBarriers>
+					<li>0.01</li>
+					<li>1.01</li>
+					<li>2.01</li>
+					<li>3.01</li>
+					<li>4.01</li>
+				</severityBarriers>
+				<severityPerDay>0.5</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>inactive</label>
+				<painOffset>0.01</painOffset>
+        		<vomitMtbDays>1.0</vomitMtbDays>
+			</li> 
+			<li>
+				<label>minor</label>
+				<minSeverity>1.0</minSeverity>
+				<painOffset>0.05</painOffset>
+        		<vomitMtbDays>0.75</vomitMtbDays>
+			</li> 
+			<li>
+				<minSeverity>2.0</minSeverity>
+				<label>major</label>
+				<painOffset>0.08</painOffset>
+        		<vomitMtbDays>0.5</vomitMtbDays>
+			</li>
+			<li>
+				<minSeverity>3.0</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.12</painOffset>
+        		<vomitMtbDays>0.25</vomitMtbDays>
+				<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.05</offset>
+				</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>4.0</minSeverity>
+				<label>debilitating</label>
+				<painOffset>0.2</painOffset>
+        		<vomitMtbDays>0.1</vomitMtbDays>
+				<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.1</offset>
+				</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>5.0</minSeverity>
+				<label>crippling</label>
+				<painOffset>0.85</painOffset>
+				<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.1</setMax>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.05</offset>
+				</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

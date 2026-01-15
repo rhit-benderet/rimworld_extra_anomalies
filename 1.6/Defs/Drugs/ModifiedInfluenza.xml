@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>EA_ModifiedInfluenzaSyringe</defName>
+    <label>modified influenza syringe</label>
+    <description>A syringe containing a modified version of influenza designed to fight of the phthoravirus.</description>
+    <descriptionHyperlinks>
+      <HediffDef>Hediff_EAModifiedInfluenza</HediffDef>
+    </descriptionHyperlinks>
+	<possessionCount>10</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Drug/EA_ModifiedInfluenzaSyringe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150,170,150)</color>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>250</WorkToMake>
+      <MarketValue>5</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <minRewardCount>1</minRewardCount>
+    <ingestible>
+      <baseIngestTicks>650</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Medical</drugCategory>
+	  <foodType>Processed</foodType>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.23,0,0.065)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>Hediff_EAModifiedInfluenza</hediffDef>
+          <severity>0.01</severity>
+          <divideByBodySize>false</divideByBodySize>
+          <multiplyByGeneToleranceFactors>false</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>EA_ModifiedInfluenzaResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <displayPriority>1600</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>4</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -102,9 +102,10 @@
 						<threshold>3.5</threshold>
 						<label>#4/4 Anomalous syringe study report</label>
 						<text>
-							something something a way to control it idk
+							Research into the phthoravirus has revealed that a modified strain of influenza may be able to fight back against the virus, delaying the next mutation.\nThis strain of influenza will have more detrimental effects the further along the phthoravirus is, and it cannot reverse a mutation if has already occured nor can it fully eradicate the phthoravirus. Ensure that every infected colonist does not miss a dose.
 						</text>
 						<ThreatClass>1</ThreatClass>
+						<ThingDefSpawn>EA_ResearchNotesMI</ThingDefSpawn>
 						<isSyncWithDB>true</isSyncWithDB>
 					</li>
 				</studyNotes>
