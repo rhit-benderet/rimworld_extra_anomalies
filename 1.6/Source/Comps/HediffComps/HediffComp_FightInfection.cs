@@ -18,7 +18,7 @@ namespace ExtraAnomalies
 		public override void CompPostTick(ref float severityAdjustment)
 		{
 			base.CompPostTick(ref severityAdjustment);
-			if (Find.TickManager.TicksGame % 200 == 0)
+			if (Find.TickManager.TicksGame % 200 == 0 && !this.parent.FullyImmune())
             {
                 Pawn pawn = this.parent.pawn;
                 List<Hediff> hediffs = new List<Hediff>();

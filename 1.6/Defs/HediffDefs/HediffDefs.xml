@@ -129,7 +129,7 @@
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>0.0</severityPerDayNotImmune>
 				<immunityPerDaySick>0.025</immunityPerDaySick>
-				<severityPerDayImmune>-7.0</severityPerDayImmune>
+				<severityPerDayImmune>-700.0</severityPerDayImmune>
 				<immunityPerDayNotSick>-10.0</immunityPerDayNotSick>
 			</li>
 			<li Class="ExtraAnomalies.HediffCompProperties_FightInfection">
