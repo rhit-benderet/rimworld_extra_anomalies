@@ -63,9 +63,13 @@ namespace ExtraAnomalies
 			get
 			{
                 HediffComp_SeverityPerDay severityPerDay = this.parent.TryGetComp<HediffComp_SeverityPerDay>();
+                int ticksLeft = (int)(this.DaysUntilTransformation() * 60000f);
+
 				if (severityPerDay != null && this.parent.Severity >= this.Props.revealTransformSeverity)
 				{
-					return "Days until transformation: " + this.DaysUntilTransformation().ToString("0.0");
+					string time = ticksLeft.ToStringTicksToPeriod(true, false, true, true, false);
+				
+				    return "ExtraAnomalies.TransformationTooltip".Translate(time);
 				}
 				return null;
 			}

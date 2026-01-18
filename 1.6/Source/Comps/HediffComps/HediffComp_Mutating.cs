@@ -36,9 +36,12 @@ namespace ExtraAnomalies
 			get
 			{
                 float daysUntilMutation = this.DaysUntilMutation();
+				int ticksLeft = (int)(daysUntilMutation * 60000f);
 				if (daysUntilMutation != -1f)
 				{
-					return "Days until mutation: " + this.DaysUntilMutation().ToString("0.0");
+					string time = ticksLeft.ToStringTicksToPeriod(true, false, true, true, false);
+				
+				    return "ExtraAnomalies.MutationTooltip".Translate(time);
 				}
 				return null;
 			}

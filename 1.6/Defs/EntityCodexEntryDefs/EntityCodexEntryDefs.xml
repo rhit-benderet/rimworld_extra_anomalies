@@ -17,7 +17,7 @@
 	<EntityCodexEntryDef>
 		<defName>EA_EntityCodexEntry_AnkleMonitor</defName>
 		<label>strange device</label>
-		<category>Advanced</category>
+		<category>Basic</category>
 		<uiIconPath>UI/CodexEntries/EA_AnkleMonitor</uiIconPath>
 		<useDescriptionFrom>EA_AnkleMonitor</useDescriptionFrom>
 		<linkedThings>

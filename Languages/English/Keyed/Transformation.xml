@@ -6,4 +6,7 @@
     <ExtraAnomalies.AttachTooltip>order a pawn to attach {0} to someone</ExtraAnomalies.AttachTooltip>
     <ExtraAnomalies.RandomAttachment>{0} breached containment</ExtraAnomalies.RandomAttachment>
     <ExtraAnomalies.RandomAttachment.Letter>All of a sudden the {1} flew at {0} attaching itself to their leg.</ExtraAnomalies.RandomAttachment.Letter>
+    <ExtraAnomalies.DetachAfterTimer>Will detach in {0}.</ExtraAnomalies.DetachAfterTimer>
+    <ExtraAnomalies.TransformationTooltip>Will transform in {0}.</ExtraAnomalies.TransformationTooltip>
+    <ExtraAnomalies.MutationTooltip>Will mutate in {0}.</ExtraAnomalies.MutationTooltip>
 </LanguageData>

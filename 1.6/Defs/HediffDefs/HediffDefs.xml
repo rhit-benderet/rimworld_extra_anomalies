@@ -9,6 +9,7 @@
 		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
 		<isBad>true</isBad>
 		<isInfection>true</isInfection>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>0.25</severityPerDay>
@@ -206,12 +207,70 @@
 	
 	<HediffDef>
         <defName>Hediff_EAAnkleMonitor</defName>
-		<hediffClass>HediffWithComps</hediffClass>
 		<label>ankle monitor</label>
+		<hediffClass>HediffWithComps</hediffClass>
 		<description>An anomolous ankle monitor.</description>
-		<initialSeverity>0.01</initialSeverity>
-		<maxSeverity>5.0</maxSeverity>
-		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<everCurableByItem>false</everCurableByItem>
 		<isBad>true</isBad>
+		<comps>
+			<li Class="ExtraAnomalies.HediffCompProperties_DiscourageTouchingGrass">
+				<severityPerHourOutside>4.0</severityPerHourOutside>
+				<severityPerHourInside>-16.0</severityPerHourInside>
+				<maxSeverity>16.0</maxSeverity>
+				<hediffDef>Hediff_EAElectricShock</hediffDef>
+			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_DetachAfterTimer">
+				<daysToDetach>5</daysToDetach>
+				<spawnedItem>EA_AnkleMonitor</spawnedItem>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
+        <defName>Hediff_EAElectricShock</defName>
+		<label>electric shock</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>An electric shock from an ankle monitor.</description>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>16.0</maxSeverity>
+		<lethalSeverity>16.0</lethalSeverity>
+		<isBad>true</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="ExtraAnomalies.HediffCompProperties_RequireOtherHediff">
+				<decayAmountPerHour>16.0</decayAmountPerHour>
+				<hediffTypes>
+					<li>Hediff_EAAnkleMonitor</li>
+				</hediffTypes>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>painful</label>
+				<painOffset>0.10</painOffset>
+			</li>
+			<li>
+				<label>excruciating</label>
+				<painOffset>0.50</painOffset>
+				<minSeverity>2.0</minSeverity>
+			</li>
+			<li>
+				<label>unbearable</label>
+				<painOffset>1.0</painOffset>
+				<minSeverity>4.0</minSeverity>
+			</li>
+			<li>
+				<label>paralyzing</label>
+				<painOffset>1.0</painOffset>
+				<minSeverity>5.0</minSeverity>
+        		<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
 	</HediffDef>
 </Defs>
