@@ -203,4 +203,15 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<HediffDef>
+        <defName>Hediff_EAAnkleMonitor</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>ankle monitor</label>
+		<description>An anomolous ankle monitor.</description>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>5.0</maxSeverity>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<isBad>true</isBad>
+	</HediffDef>
 </Defs>

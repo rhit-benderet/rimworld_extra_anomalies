@@ -2,4 +2,8 @@
 <LanguageData>
 	<ExtraAnomalies.Transformation.Transformation_Letter>The {2} has finished mutating {0}, transforming them into a viscious {1}.</ExtraAnomalies.Transformation.Transformation_Letter>
     <ExtraAnomalies.Transformation>Unnatural Transformation</ExtraAnomalies.Transformation>
+    <ExtraAnomalies.Attach>attach</ExtraAnomalies.Attach>
+    <ExtraAnomalies.AttachTooltip>order a pawn to attach {0} to someone</ExtraAnomalies.AttachTooltip>
+    <ExtraAnomalies.RandomAttachment>{0} breached containment</ExtraAnomalies.RandomAttachment>
+    <ExtraAnomalies.RandomAttachment.Letter>All of a sudden the {1} flew at {0} attaching itself to their leg.</ExtraAnomalies.RandomAttachment.Letter>
 </LanguageData>

@@ -30,14 +30,7 @@ namespace ExtraAnomalies
                 if (nextMutationSeverity != -1f) return (nextMutationSeverity - this.parent.Severity) / severityPerDay.severityPerDay;
             }
             return -1f;
-        }
-        public static void SendLetterForTransformation(NamedArgument pawnName, NamedArgument transformedPawnName, NamedArgument hediffName, Thing transformed)
-        {
-            TaggedString title = "ExtraAnomalies.Transformation".Translate();
-            TaggedString letterText = "ExtraAnomalies.Transformation.Transformation_Letter".Translate(pawnName, transformedPawnName, hediffName);
-
-            Find.LetterStack.ReceiveLetter(title, letterText, LetterDefOf.NegativeEvent, new TargetInfo(transformed));
-        }
+        }        
         public override string CompTipStringExtra
 		{
 			get

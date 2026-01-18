@@ -41,10 +41,6 @@ namespace ExtraAnomalies
         protected override void OnInteracted(Pawn caster)
         {
             GiveHediff(caster);
-            if (caster.skills != null && caster.skills.skills.Where((SkillRecord x) => !x.TotallyDisabled).TryRandomElement(out var result))
-            {
-                result.Learn(4800f, direct: true);
-            }
         }
     }
 }

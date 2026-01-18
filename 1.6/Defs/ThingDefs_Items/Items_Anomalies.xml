@@ -54,7 +54,7 @@
 
 				<targetingParameters>
 					<canTargetBuildings>false</canTargetBuildings>
-					<canTargetAnimals>true</canTargetAnimals>
+					<canTargetAnimals>false</canTargetAnimals>
 					<canTargetMechs>false</canTargetMechs>
 					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
 				</targetingParameters>
@@ -101,11 +101,85 @@
 						<AnomalyDesc>A medical syringe filled with a sample of the phthoravirus. \n\nThe sample regenerates after being expelled.\n\nClassified as Class-1 (Warning) anomaly.</AnomalyDesc>
 						<threshold>3.5</threshold>
 						<label>#4/4 Anomalous syringe study report</label>
-						<text>
-							Research into the phthoravirus has revealed that a modified strain of influenza may be able to fight back against the virus, delaying the next mutation.\nThis strain of influenza will have more detrimental effects the further along the phthoravirus is, and it cannot reverse a mutation if has already occured nor can it fully eradicate the phthoravirus. Ensure that every infected colonist does not miss a dose.
-						</text>
+						<text>Research into the phthoravirus has revealed that a modified strain of influenza may be able to fight back against the virus, delaying the next mutation.\nThis strain of influenza will have more detrimental effects the further along the phthoravirus is, and it cannot reverse a mutation if has already occured nor can it fully eradicate the phthoravirus. Ensure that every infected colonist does not miss a dose.</text>
 						<ThreatClass>1</ThreatClass>
 						<ThingDefSpawn>EA_ResearchNotesMI</ThingDefSpawn>
+						<isSyncWithDB>true</isSyncWithDB>
+					</li>
+				</studyNotes>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_StudyNotes</li>
+		</inspectorTabs>
+	</ThingDef>
+
+
+	<ThingDef>
+		<defName>EA_AnkleMonitor</defName>
+		<label>strange device</label>
+		<description>A strange ring shaped device, it appears to have a small seven segment display on it.</description>
+		<category>Item</category>
+		<thingClass>AnomaliesExpected.ThingWithComps_AE</thingClass>
+		<genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_AnomalySyringe</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-5</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>2000</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ItemsAnomalies</li>
+		</thingCategories>
+		<hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<compClass>ExtraAnomalies.Comp_AnkleMonitor</compClass>
+				<useJob>EA_UseAnkleMonitor</useJob>
+				<useLabel>Attach {0_label}</useLabel>
+				<useDuration>0</useDuration>
+				<showUseGizmo>true</showUseGizmo>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>CompTargetable_SinglePawn</compClass>
+			</li>
+
+			<li Class="ExtraAnomalies.CompProperties_TargetEffectAttachAnkleMonitor"></li>
+			<li Class="ExtraAnomalies.CompProperties_AnkleMonitorAttachSelf"></li>
+			
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Basic</knowledgeCategory>
+				<anomalyKnowledge>1.0</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<showToggleGizmo>true</showToggleGizmo>
+			</li>
+			<li Class="CompProperties_StudyUnlocks">
+				<compClass>AnomaliesExpected.CompAEStudyUnlocks</compClass>
+				<studyNotes>
+					<li Class="AnomaliesExpected.AEStudyNote">
+						<AnomalyLabel>ankle monitor</AnomalyLabel>
+						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
+						<threshold>1.5</threshold>
+						<label>#1/4 Strange device study report</label>
+						<text>Mechanics of the strange device\n\nSubject: {PAWN_nameDef}\n\nAbstract:\nThe device appears to be an ankle monitor of sorts. There is a display that acts as a countdown, likely to the release of the ankle monitor. Exiting an indoors environment will cause the ankle montior to deliver an electric shock. The severity will increase the longer the subject has stayed outside, eventually culminating in death. It has a nasty habit of randomly latching onto pawns.\n\nObservations:\nUpon studying the device, it latched onto {PAWN_nameDef}'s ankle. After the incident, the subject seemed unwilling to exit the facility, complaining of a sharp electric shock when going outside. Eventually they were forced to leave the facility only to be rushed back in a couple minutes later after they had been knocked unconscious by the device. There appears to be no way to remove it until the timer is complete after which it will likely fall off on its own.\n\nDiscussion:\nThe ankle monitor has been classified as Class-1 (Caution) anomaly.\n\nRecommendations:\nFurther research into the monitor once it detatches from {PAWN_nameDef}.</text>
+						<ThreatClass>1</ThreatClass>
 						<isSyncWithDB>true</isSyncWithDB>
 					</li>
 				</studyNotes>
