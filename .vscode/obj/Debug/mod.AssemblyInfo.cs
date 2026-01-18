@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExtraAnomalies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+b67dcd3735997c4a8a2766a8c103b3f4e1eaec56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+00872813c587f2d9e395a6c3921efd83ce0f8def")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExtraAnomalies")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExtraAnomalies")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

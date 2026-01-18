@@ -14,4 +14,18 @@
 		</provocationIncidents>
 		<orderInCategory>1300</orderInCategory>
 	</EntityCodexEntryDef>
+	<EntityCodexEntryDef>
+		<defName>EA_EntityCodexEntry_AnkleMonitor</defName>
+		<label>strange device</label>
+		<category>Advanced</category>
+		<uiIconPath>UI/CodexEntries/EA_AnkleMonitor</uiIconPath>
+		<useDescriptionFrom>EA_AnkleMonitor</useDescriptionFrom>
+		<linkedThings>
+			<li>EA_AnkleMonitor</li>
+		</linkedThings>
+		<provocationIncidents>
+			<li>EA_IncidentDef_AnkleMonitorSpawn</li>
+		</provocationIncidents>
+		<orderInCategory>1300</orderInCategory>
+	</EntityCodexEntryDef>
 </Defs>

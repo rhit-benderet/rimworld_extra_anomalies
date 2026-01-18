@@ -26,4 +26,33 @@
 			</li>
 		</modExtensions>
 	</IncidentDef>
+
+	
+    <IncidentDef>
+		<defName>EA_IncidentDef_AnkleMonitorSpawn</defName>
+		<label>strange device</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>AnomaliesExpected.IncidentWorker_DeployThingFromOrbit</workerClass>
+		<letterLabel>Found strange device</letterLabel>
+		<letterText>Your colonist noticed some object falling from the sky nearby. It appears to be a ring large enough to fit a leg. It is equipped with a seven segment display.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+		<earliestDay>30</earliestDay>
+		<baseChance>0.2</baseChance>
+		<requireColonistsPresent>True</requireColonistsPresent>
+		<minAnomalyThreatLevel>1</minAnomalyThreatLevel>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="AnomaliesExpected.IncidentDefExtension">
+				<DeployableThingDefs>
+					<li>EA_AnkleMonitor</li>
+				</DeployableThingDefs>
+				<ActiveDropPodDef>AE_ActiveDropPodAnomaly</ActiveDropPodDef>
+				<SkyfallerDef>AE_AnomalyIncoming</SkyfallerDef>
+				<ChanceFactorPowPerBuilding>0</ChanceFactorPowPerBuilding>
+			</li>
+		</modExtensions>
+	</IncidentDef>
 </Defs>
