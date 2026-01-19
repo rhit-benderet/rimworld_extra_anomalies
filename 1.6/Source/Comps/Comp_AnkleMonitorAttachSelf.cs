@@ -16,10 +16,13 @@ namespace ExtraAnomalies
         }
         private bool ValidatePawn(Pawn pawn)
 		{
-			if (pawn.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
-			{
-				return false;
-			}
+            foreach (HediffDef def in HediffGroups.ankleMonitorHediffs)
+            {
+                if (pawn.health.hediffSet.HasHediff(def, false))
+                {
+                    return false;
+                }   
+            }
             List<BodyPartRecord> legs = pawn.health.hediffSet.GetNotMissingParts().Where(x => x.def == BodyPartDefOf.Leg).ToList();
 			if (legs.Count == 0)
             {

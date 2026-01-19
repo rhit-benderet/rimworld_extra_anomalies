@@ -23,9 +23,12 @@ namespace ExtraAnomalies
 				return;
 			}
 			Pawn attachee = (Pawn)target;
-			if (attachee.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
+			foreach (HediffDef def in HediffGroups.ankleMonitorHediffs)
 			{
-				return;
+				if (attachee.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
+				{
+					return;
+				}
 			}
 			List<BodyPartRecord> legs = attachee.health.hediffSet.GetNotMissingParts().Where(x => x.def == BodyPartDefOf.Leg).ToList();
 			if (legs.Count == 0)

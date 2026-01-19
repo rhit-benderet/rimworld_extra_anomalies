@@ -211,6 +211,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<description>An anomolous ankle monitor.</description>
 		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
 		<isBad>true</isBad>
 		<comps>
 			<li Class="ExtraAnomalies.HediffCompProperties_DiscourageTouchingGrass">

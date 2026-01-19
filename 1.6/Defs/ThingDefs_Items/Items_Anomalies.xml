@@ -157,7 +157,7 @@
 				<showUseGizmo>true</showUseGizmo>
 			</li>
 			<li Class="CompProperties_Targetable">
-				<compClass>CompTargetable_SinglePawn</compClass>
+				<compClass>ExtraAnomalies.CompTargetable_AnkleMonitorTarget</compClass>
 			</li>
 
 			<li Class="ExtraAnomalies.CompProperties_TargetEffectAttachAnkleMonitor"></li>

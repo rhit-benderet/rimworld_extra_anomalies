@@ -1,0 +1,77 @@
+<Defs>
+    <ThingDef>
+        <defName>EA_SyntheticLeg</defName>
+        <label>synthetic leg</label>
+		<description>A synthetic leg created to pacify an ankle monitor.</description>
+		<category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+		<rotatable>false</rotatable>
+        <genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_SyntheticLeg</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-3</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>60</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<comps>
+			<li Class="ExtraAnomalies.CompProperties_SyntheticLeg">
+                <turnIntoOnceAttached>EA_SyntheticLegWithMonitor</turnIntoOnceAttached>
+            </li>
+		</comps>
+    </ThingDef>
+    <ThingDef>
+        <defName>EA_SyntheticLegWithMonitor</defName>
+        <thingClass>ThingWithComps</thingClass>
+        <label>synthetic leg</label>
+		<description>A synthetic leg created to pacify an ankle monitor.</description>
+		<category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+		<rotatable>false</rotatable>
+        <genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_SyntheticLeg</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-3</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>60</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+        <comps>
+            <li Class="ExtraAnomalies.CompProperties_MonitorEscapeTimer">
+                <daysToEscape>5.0</daysToEscape>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
