@@ -37,7 +37,7 @@ namespace ExtraAnomalies
 			ThingWithComps thingWithComps = thing as ThingWithComps;
             if (thingWithComps != null)
             {
-				if (thingWithComps.def.category == ThingCategory.Item)
+				if (thingWithComps.def.category != ThingCategory.Pawn)
 				{
 					Comp_SyntheticLeg compSyntheticLeg = thingWithComps.TryGetComp<Comp_SyntheticLeg>();
 					if (compSyntheticLeg == null)
@@ -59,6 +59,7 @@ namespace ExtraAnomalies
                 canTargetEntities = false,
 				canTargetItems = true,
 				thingCategory = ThingCategory.None,
+				mapObjectTargetsMustBeAutoAttackable = false,
 				validator = delegate(TargetInfo target)
 				{
 					return this.ValidateTarget((LocalTargetInfo)target, false);

@@ -22,23 +22,39 @@ namespace ExtraAnomalies
 			{
 				return;
 			}
-			Pawn attachee = (Pawn)target;
-			foreach (HediffDef def in HediffGroups.ankleMonitorHediffs)
+			Pawn attachee = target as Pawn;
+			if (attachee == null)
 			{
-				if (attachee.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
+				ThingWithComps thingWithComps = target as ThingWithComps;
+				if (thingWithComps != null)
+				{
+					Comp_SyntheticLeg compSyntheticLeg = thingWithComps.TryGetComp<Comp_SyntheticLeg>();
+					if (compSyntheticLeg != null)
+					{
+						Job job = JobMaker.MakeJob(EAJob_Def.EA_PutMonitorOnLeg, target, this.parent);
+						job.count = 1;
+						job.playerForced = true;
+						user.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
+					}
+				}
+			} else {
+				foreach (HediffDef def in HediffGroups.ankleMonitorHediffs)
+				{
+					if (attachee.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
+					{
+						return;
+					}
+				}
+				List<BodyPartRecord> legs = attachee.health.hediffSet.GetNotMissingParts().Where(x => x.def == BodyPartDefOf.Leg).ToList();
+				if (legs.Count == 0)
 				{
 					return;
 				}
+				Job job = JobMaker.MakeJob(EAJob_Def.EA_AttachAnkleMonitor, target, this.parent);
+				job.count = 1;
+				job.playerForced = true;
+				user.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
 			}
-			List<BodyPartRecord> legs = attachee.health.hediffSet.GetNotMissingParts().Where(x => x.def == BodyPartDefOf.Leg).ToList();
-			if (legs.Count == 0)
-			{
-				return;
-			}
-			Job job = JobMaker.MakeJob(EAJob_Def.EA_AttachAnkleMonitor, target, this.parent);
-			job.count = 1;
-			job.playerForced = true;
-			user.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
 		}
 	}
 }

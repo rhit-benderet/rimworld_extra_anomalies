@@ -6,6 +6,12 @@
         <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     </JobDef>
     <JobDef>
+        <defName>EA_PutMonitorOnLeg</defName>
+        <driverClass>ExtraAnomalies.JobDriver_PutMonitorOnLeg</driverClass>
+        <reportString>attaching ankle monitor to TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+    <JobDef>
         <defName>EA_UseAnkleMonitor</defName>
         <driverClass>JobDriver_UseItem</driverClass>
         <reportString>attaching ankle monitor to TargetB.</reportString>

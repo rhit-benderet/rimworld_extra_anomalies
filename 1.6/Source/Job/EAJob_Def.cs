@@ -7,5 +7,6 @@ namespace ExtraAnomalies
     public static class EAJob_Def
     {
         public static JobDef EA_AttachAnkleMonitor;
+        public static JobDef EA_PutMonitorOnLeg;
     }
 }
