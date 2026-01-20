@@ -19,7 +19,7 @@
 		<pathCost>14</pathCost>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Things/Item/Special/EA_SyntheticLeg</texPath>
+			<texPath>Things/Item/Misc/EA_SyntheticLeg</texPath>
 		</graphicData>
 		<statBases>
 			<Mass>1</Mass>
@@ -34,7 +34,23 @@
 			<li Class="ExtraAnomalies.CompProperties_SyntheticLeg">
                 <turnIntoOnceAttached>EA_SyntheticLegWithMonitor</turnIntoOnceAttached>
             </li>
+			
 		</comps>
+    	<costList>
+			<Meat_Human>40</Meat_Human>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>TableButcher</li>
+			</recipeUsers>
+			<researchPrerequisite>EA_SyntheticLegResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<displayPriority>2000</displayPriority>
+		</recipeMaker>
     </ThingDef>
     <ThingDef>
         <defName>EA_SyntheticLegWithMonitor</defName>
@@ -57,7 +73,7 @@
 		<pathCost>14</pathCost>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Things/Item/Special/EA_SyntheticLeg</texPath>
+			<texPath>Things/Item/Misc/EA_SyntheticLegWithMonitor</texPath>
 		</graphicData>
 		<statBases>
 			<Mass>1</Mass>
@@ -74,4 +90,53 @@
             </li>
         </comps>
     </ThingDef>
+
+	<ThingDef>
+		<defName>EA_AnkleMonitorManmade</defName>
+		<label>manmade ankle monitor</label>
+		<description>A manmade ankle monitor for keeping people indoors.</description>
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_AnkleMonitor</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-5</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>1000</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<compClass>ExtraAnomalies.Comp_AnkleMonitorManmade</compClass>
+				<useJob>EA_UseAnkleMonitorManmade</useJob>
+				<useLabel>Attach {0_label}</useLabel>
+				<useDuration>0</useDuration>
+				<showUseGizmo>true</showUseGizmo>
+			</li>
+			<li Class="ExtraAnomalies.CompTargetableProperties_AnkleMonitorTarget">
+				<canPutOnSyntheticLeg>false</canPutOnSyntheticLeg>
+			</li>
+
+			<li Class="ExtraAnomalies.CompProperties_TargetEffectAttachAnkleMonitor">
+				<attachJobDef>EA_AttachAnkleMonitorManmade</attachJobDef>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
 </Defs>

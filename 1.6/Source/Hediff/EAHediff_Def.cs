@@ -9,5 +9,6 @@ namespace ExtraAnomalies
         public static HediffDef Hediff_EAAnomalousSyringe;
         public static HediffDef Hediff_EAModifiedInfluenza;
         public static HediffDef Hediff_EAAnkleMonitor;
+        public static HediffDef Hediff_EAAnkleMonitorManmade;
     }
 }

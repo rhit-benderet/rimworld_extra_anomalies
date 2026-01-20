@@ -19,6 +19,34 @@
         </requiredAnalyzed>
         <knowledgeCost>5</knowledgeCost>
         <knowledgeCategory>Advanced</knowledgeCategory>
+        <researchViewX>4.5</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>EA_SyntheticLegResearch</defName>
+        <label>synthetic leg</label>
+        <description>Learn how to create a synthetic leg. Placing an ankle monitor on a synthetic leg will pacify it for a couple days.</description>
+        <tab>ExtraAnomalies</tab>
+        <requiredAnalyzed>
+            <li>EA_ResearchNotesSL</li>
+        </requiredAnalyzed>
+        <knowledgeCost>10</knowledgeCost>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <researchViewX>0</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>EA_ManmadeAnkleMonitorResearch</defName>
+        <label>manmade ankle monitor</label>
+        <description>Learn how to create a manmade ankle monitor. This monitor will deliver the shock faster than the anomalous monitor and will never give a lethal shock.</description>
+        <tab>ExtraAnomalies</tab>
+        <requiredAnalyzed>
+            <li>EA_ResearchNotesMAM</li>
+        </requiredAnalyzed>
+        <knowledgeCost>10</knowledgeCost>
+        <knowledgeCategory>Basic</knowledgeCategory>
         <researchViewX>1</researchViewX>
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>

@@ -15,6 +15,7 @@ namespace ExtraAnomalies
 				return true;
 			}
 		}
+		public new CompTargetableProperties_AnkleMonitorTarget Props => (CompTargetableProperties_AnkleMonitorTarget)base.Props;
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
             Thing thing = target.Thing;
@@ -40,7 +41,7 @@ namespace ExtraAnomalies
 				if (thingWithComps.def.category != ThingCategory.Pawn)
 				{
 					Comp_SyntheticLeg compSyntheticLeg = thingWithComps.TryGetComp<Comp_SyntheticLeg>();
-					if (compSyntheticLeg == null)
+					if (compSyntheticLeg == null || !this.Props.canPutOnSyntheticLeg)
 					{
 						return false;
 					}

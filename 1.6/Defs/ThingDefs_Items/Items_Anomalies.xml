@@ -156,11 +156,13 @@
 				<useDuration>0</useDuration>
 				<showUseGizmo>true</showUseGizmo>
 			</li>
-			<li Class="CompProperties_Targetable">
-				<compClass>ExtraAnomalies.CompTargetable_AnkleMonitorTarget</compClass>
+			<li Class="ExtraAnomalies.CompTargetableProperties_AnkleMonitorTarget">
+				<canPutOnSyntheticLeg>true</canPutOnSyntheticLeg>
 			</li>
 
-			<li Class="ExtraAnomalies.CompProperties_TargetEffectAttachAnkleMonitor"></li>
+			<li Class="ExtraAnomalies.CompProperties_TargetEffectAttachAnkleMonitor">
+				<attachJobDef>EA_AttachAnkleMonitor</attachJobDef>
+			</li>
 			<li Class="ExtraAnomalies.CompProperties_AnkleMonitorAttachSelf"></li>
 			
 			<li Class="CompProperties_Studiable">
@@ -180,6 +182,26 @@
 						<label>#1/4 Strange device study report</label>
 						<text>Mechanics of the strange device\n\nSubject: {PAWN_nameDef}\n\nAbstract:\nThe device appears to be an ankle monitor of sorts. There is a display that acts as a countdown, likely to the release of the ankle monitor. Exiting an indoors environment will cause the ankle montior to deliver an electric shock. The severity will increase the longer the subject has stayed outside, eventually culminating in death. It has a nasty habit of randomly latching onto pawns.\n\nObservations:\nUpon studying the device, it latched onto {PAWN_nameDef}'s ankle. After the incident, the subject seemed unwilling to exit the facility, complaining of a sharp electric shock when going outside. Eventually they were forced to leave the facility only to be rushed back in a couple minutes later after they had been knocked unconscious by the device. There appears to be no way to remove it until the timer is complete after which it will fall off on its own.\n\nDiscussion:\nThe ankle monitor has been classified as Class-2 (Warning) anomaly.\n\nRecommendations:\nFurther research into the monitor.</text>
 						<ThreatClass>2</ThreatClass>
+						<isSyncWithDB>true</isSyncWithDB>
+					</li>
+					<li Class="AnomaliesExpected.AEStudyNote">
+						<AnomalyLabel>ankle monitor</AnomalyLabel>
+						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
+						<threshold>3.5</threshold>
+						<label>#2/4 Strange device study report</label>
+						<text>Ankle monitor containment protocol\n\nAbstract:\nResearch into the monitor suggests that it can be pacified for a couple of days by placing it on a synthetic leg.\n\nObservations:\nWhile placed on a leg, it appears that the monitor does not attempt to attach to another leg. Furthermore, the mechanism that detects whether it is attached to a living leg appears to only be used when it attempts to detach. It may be possible to create a synthetic leg and place the monitor on it to contain it for a couple days. Though, once it detaches from the synthetic leg it will realize it has been fooled and incinerate the leg.\nRecommendations:\n\nThe monitor cannot be studied on the leg so it may be advantageous to keep it detached in order to study it further.</text>
+						<ThreatClass>1</ThreatClass>
+						<ThingDefSpawn>EA_ResearchNotesSL</ThingDefSpawn>
+						<isSyncWithDB>true</isSyncWithDB>
+					</li>
+					<li Class="AnomaliesExpected.AEStudyNote">
+						<AnomalyLabel>ankle monitor</AnomalyLabel>
+						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
+						<threshold>6.0</threshold>
+						<label>#3/4 Strange device study report</label>
+						<text>Ankle monitor shocking mechanism\n\nAbstract:\nResearch into the ankle monitor has shown that the shocking mechanism is recreatable.\n\nObservations:\nUpon attaching to a target, the ankle monitor immediately connects directly to the central nervous system. It delivers the shocks through this connection ensuring maximum effectiveness on the target.\n\nRecommendations:\nResearch into making a manmade ankle monitor could prove to be a valuable tool in preventing prison breaks.</text>
+						<ThreatClass>1</ThreatClass>
+						<ThingDefSpawn>EA_ResearchNotesMAM</ThingDefSpawn>
 						<isSyncWithDB>true</isSyncWithDB>
 					</li>
 				</studyNotes>

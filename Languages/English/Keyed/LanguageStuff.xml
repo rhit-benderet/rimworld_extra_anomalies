@@ -13,5 +13,5 @@
     <ExtraAnomalies.ReattachLeg.Letter>{0}'s ankle monitor copied the last known state of their leg and reattached it as if it was never destroyed.</ExtraAnomalies.ReattachLeg.Letter>
     <ExtraAnomalies.RejectPart>Replacement Rejected</ExtraAnomalies.RejectPart>
     <ExtraAnomalies.RejectPart.Letter>{0}'s ankle monitor prevented the replacement of the leg it was on.</ExtraAnomalies.RejectPart.Letter>
-    <ExtraAnomalies.TicksUntilBreach>The ankle monitor will realise the leg is synthetic in {0}.</ExtraAnomalies.TicksUntilBreach>
+    <ExtraAnomalies.TicksUntilBreach>The ankle monitor will realize the leg is synthetic in {0}.</ExtraAnomalies.TicksUntilBreach>
 </LanguageData>

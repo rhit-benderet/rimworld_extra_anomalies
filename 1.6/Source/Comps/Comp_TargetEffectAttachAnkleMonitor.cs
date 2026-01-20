@@ -40,7 +40,7 @@ namespace ExtraAnomalies
 			} else {
 				foreach (HediffDef def in HediffGroups.ankleMonitorHediffs)
 				{
-					if (attachee.health.hediffSet.HasHediff(EAHediff_Def.Hediff_EAAnkleMonitor, false))
+					if (attachee.health.hediffSet.HasHediff(def, false))
 					{
 						return;
 					}
@@ -50,7 +50,7 @@ namespace ExtraAnomalies
 				{
 					return;
 				}
-				Job job = JobMaker.MakeJob(EAJob_Def.EA_AttachAnkleMonitor, target, this.parent);
+				Job job = JobMaker.MakeJob(this.Props.attachJobDef, target, this.parent);
 				job.count = 1;
 				job.playerForced = true;
 				user.jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);

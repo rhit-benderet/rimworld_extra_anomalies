@@ -7,7 +7,8 @@ namespace ExtraAnomalies
     {
         public static List<HediffDef> ankleMonitorHediffs =
         new List<HediffDef> {
-            EAHediff_Def.Hediff_EAAnkleMonitor
+            EAHediff_Def.Hediff_EAAnkleMonitor,
+            EAHediff_Def.Hediff_EAAnkleMonitorManmade
         };
     }
 }

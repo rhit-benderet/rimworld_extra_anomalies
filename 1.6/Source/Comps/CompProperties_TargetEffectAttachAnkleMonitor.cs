@@ -9,5 +9,6 @@ namespace ExtraAnomalies
 		{
 			this.compClass = typeof(Comp_TargetEffectAttachAnkleMonitor);
 		}
+		public JobDef attachJobDef;
 	}
 }

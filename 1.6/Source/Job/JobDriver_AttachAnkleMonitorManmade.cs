@@ -9,7 +9,7 @@ using Verse.Sound;
 
 namespace ExtraAnomalies
 {
-	public class JobDriver_AttachAnkleMonitor : JobDriver
+	public class JobDriver_AttachAnkleMonitorManmade : JobDriver
 	{
 		private Pawn Attachee
 		{
@@ -73,7 +73,7 @@ namespace ExtraAnomalies
 			{
 				return;
 			}
-			this.Attachee.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			this.Attachee.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitorManmade, legs.RandomElement());
 			this.Item.SplitOff(1).Destroy(DestroyMode.Vanish);
 		}
 		private Mote warmupMote;

@@ -228,6 +228,24 @@
 	</HediffDef>
 
 	<HediffDef>
+        <defName>Hediff_EAAnkleMonitorManmade</defName>
+		<label>manmade ankle monitor</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>An ankle monitor.</description>
+		<everCurableByItem>false</everCurableByItem>
+		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="ExtraAnomalies.HediffCompProperties_DiscourageTouchingGrass">
+				<severityPerHourOutside>10.0</severityPerHourOutside>
+				<severityPerHourInside>-16.0</severityPerHourInside>
+				<maxSeverity>5.0</maxSeverity>
+				<hediffDef>Hediff_EAElectricShock</hediffDef>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef>
         <defName>Hediff_EAElectricShock</defName>
 		<label>electric shock</label>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -242,6 +260,7 @@
 				<decayAmountPerHour>16.0</decayAmountPerHour>
 				<hediffTypes>
 					<li>Hediff_EAAnkleMonitor</li>
+					<li>Hediff_EAAnkleMonitorManmade</li>
 				</hediffTypes>
 			</li>
 		</comps>
@@ -264,6 +283,17 @@
 				<label>paralyzing</label>
 				<painOffset>1.0</painOffset>
 				<minSeverity>5.0</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.0</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>paralyzing</label>
+				<painOffset>1.0</painOffset>
+				<minSeverity>5.1</minSeverity>
         		<lifeThreatening>true</lifeThreatening>
 				<capMods>
 					<li>
