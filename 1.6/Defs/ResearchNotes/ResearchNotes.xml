@@ -34,7 +34,7 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="AEResearchNotesBase">
-		<defName>EA_ResearchNotesSL</defName>
+		<defName>EA_ResearchNotesMAM</defName>
 		<label>research note #AM01</label>
 		<comps>
 			<li Class="CompProperties_CompAnalyzableUnlockResearch">
@@ -68,11 +68,45 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="AEResearchNotesBase">
-		<defName>EA_ResearchNotesMAM</defName>
+		<defName>EA_ResearchNotesMTD</defName>
 		<label>research note #AM02</label>
 		<comps>
 			<li Class="CompProperties_CompAnalyzableUnlockResearch">
 				<analysisID>1515003</analysisID>
+
+				<!-- Analyzable -->
+
+				<analysisDurationHours>4</analysisDurationHours>
+				<destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+				<completedLetterLabel>Ankle monitor research note studied: {RESEARCH} unlocked</completedLetterLabel>
+				<completedLetter>By studying research note, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now begin researching how to actually use the technology.</completedLetter>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+
+				<!-- Interactable -->
+
+				<activateTexPath>UI/Icons/Study</activateTexPath>
+
+				<activateLabelString>Analyze...</activateLabelString>
+				<activateDescString>Analyze the research note.</activateDescString>
+				<jobString>Analyze research note</jobString>
+				<guiLabelString>Choose who should analyze this</guiLabelString>
+				<inspectString>Can be analyzed by a colonist.</inspectString>
+
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="AEResearchNotesBase">
+		<defName>EA_ResearchNotesSL</defName>
+		<label>research note #AM03</label>
+		<comps>
+			<li Class="CompProperties_CompAnalyzableUnlockResearch">
+				<analysisID>1515004</analysisID>
 
 				<!-- Analyzable -->
 

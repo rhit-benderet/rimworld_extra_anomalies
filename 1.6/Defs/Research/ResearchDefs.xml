@@ -45,6 +45,26 @@
         <requiredAnalyzed>
             <li>EA_ResearchNotesMAM</li>
         </requiredAnalyzed>
+        <prerequisites>
+            <li>BioferriteShaping</li>
+        </prerequisites>
+        <knowledgeCost>10</knowledgeCost>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <researchViewX>2</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>EA_AnkleMonitorTargetterResearch</defName>
+        <label>ankle monitor targetting device</label>
+        <description>Learn how to spoof the targetting for an ankle monitor. This will allow you to command an ankle monitor to attach to a certain person.</description>
+        <tab>ExtraAnomalies</tab>
+        <requiredAnalyzed>
+            <li>EA_ResearchNotesMTD</li>
+        </requiredAnalyzed>
+        <prerequisites>
+            <li>BioferriteShaping</li>
+        </prerequisites>
         <knowledgeCost>10</knowledgeCost>
         <knowledgeCategory>Basic</knowledgeCategory>
         <researchViewX>1</researchViewX>

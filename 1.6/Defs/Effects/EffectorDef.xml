@@ -1,0 +1,26 @@
+<Defs>
+    <EffecterDef>
+        <defName>EA_AttachEffect</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>0.02</positionRadius>
+                <moteDef>Mote_SparkThrownFast</moteDef>
+                <burstCount>4~5</burstCount>
+                <speed>3.3~5</speed>
+                <scale>0.6~1.2</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>0.02</positionRadius>
+                <fleckDef>MicroSparksFast</fleckDef>
+                <burstCount>1~1</burstCount>
+                <speed>0.3~0.4</speed>
+                <rotationRate>5~10</rotationRate>
+                <scale>1.8~3.0</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+</Defs>

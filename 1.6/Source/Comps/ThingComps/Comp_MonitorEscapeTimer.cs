@@ -29,7 +29,6 @@ namespace ExtraAnomalies
             base.CompTick();
             if (Find.TickManager.TicksGame % 250 == 0) {
                 this.ticksExisted += 250;
-                Log.Message(this.ticksExisted);
                 if (this.ticksExisted >= (int)(this.Props.daysToEscape * 60000f))
                 {
                     Map map = this.parent.Map;

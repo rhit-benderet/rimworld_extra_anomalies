@@ -7,5 +7,6 @@ namespace ExtraAnomalies
     public static class EAThing_Def
     {
         public static ThingDef EA_AnkleMonitor;
+        public static ThingDef EA_SyntheticLegWithMonitor;
     }
 }

@@ -224,6 +224,9 @@
 				<daysToDetach>5</daysToDetach>
 				<spawnedItem>EA_AnkleMonitor</spawnedItem>
 			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_DetachAfterDeath">
+				<spawnedItem>EA_AnkleMonitor</spawnedItem>
+			</li>
 		</comps>
 	</HediffDef>
 
@@ -241,6 +244,9 @@
 				<severityPerHourInside>-16.0</severityPerHourInside>
 				<maxSeverity>5.0</maxSeverity>
 				<hediffDef>Hediff_EAElectricShock</hediffDef>
+			</li>
+			<li Class="ExtraAnomalies.HediffCompProperties_DetachAfterDeath">
+				<spawnedItem>EA_AnkleMonitorManmade</spawnedItem>
 			</li>
 		</comps>
 	</HediffDef>

@@ -22,6 +22,7 @@
 		<useDescriptionFrom>EA_AnkleMonitor</useDescriptionFrom>
 		<linkedThings>
 			<li>EA_AnkleMonitor</li>
+			<li>EA_SyntheticLegWithMonitor</li>
 		</linkedThings>
 		<provocationIncidents>
 			<li>EA_IncidentDef_AnkleMonitorSpawn</li>

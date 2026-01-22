@@ -26,6 +26,7 @@
 			<Beauty>-3</Beauty>
 			<Flammability>0</Flammability>
 			<MarketValue>60</MarketValue>
+			<WorkToMake>300</WorkToMake>
 		</statBases>
 		<thingCategories>
 			<li>ItemsMisc</li>
@@ -88,6 +89,13 @@
             <li Class="ExtraAnomalies.CompProperties_MonitorEscapeTimer">
                 <daysToEscape>5.0</daysToEscape>
             </li>
+			<li Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<knowledgeCategory>Basic</knowledgeCategory>
+				<anomalyKnowledge>1.0</anomalyKnowledge>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<showToggleGizmo>true</showToggleGizmo>
+			</li>
         </comps>
     </ThingDef>
 
@@ -117,6 +125,7 @@
 			<Beauty>-5</Beauty>
 			<Flammability>0</Flammability>
 			<MarketValue>1000</MarketValue>
+			<WorkToMake>12000</WorkToMake>
 		</statBases>
 		<thingCategories>
 			<li>ItemsMisc</li>
@@ -138,5 +147,91 @@
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Bioferrite>30</Bioferrite>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+        	<unfinishedThingDef>UnfinishedHealthEAItem</unfinishedThingDef>
+			<recipeUsers>
+				<li>BioferriteShaper</li>
+			</recipeUsers>
+			<researchPrerequisite>EA_ManmadeAnkleMonitorResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>2000</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>EA_AnkleMonitorTargetter</defName>
+		<label>ankle monitor targetting device</label>
+		<description>A device that lets you trigger the ankle monitor to attach to someone.</description>
+		<category>Item</category>
+		<thingClass>Apparel</thingClass>
+		<genericMarketSellable>false</genericMarketSellable>
+		<drawerType>MapMeshOnly</drawerType>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<pathCost>14</pathCost>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Special/EA_AnkleMonitorTargetter</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<Beauty>-5</Beauty>
+			<Flammability>0</Flammability>
+			<MarketValue>1000</MarketValue>
+			<WorkToMake>32000</WorkToMake>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+      		<li>ApparelUtility</li>
+    	</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<scoreOffset>4</scoreOffset>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<ignoredByNonViolent>true</ignoredByNonViolent>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<abilities>
+				<li>EASendMonitor</li>
+			</abilities>
+		</apparel>
+		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+			<Bioferrite>75</Bioferrite>
+			<Shard>1</Shard>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+        	<unfinishedThingDef>UnfinishedHealthEAItem</unfinishedThingDef>
+			<recipeUsers>
+				<li>BioferriteShaper</li>
+			</recipeUsers>
+			<researchPrerequisite>EA_AnkleMonitorTargetterResearch</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>2000</displayPriority>
+		</recipeMaker>
 	</ThingDef>
 </Defs>

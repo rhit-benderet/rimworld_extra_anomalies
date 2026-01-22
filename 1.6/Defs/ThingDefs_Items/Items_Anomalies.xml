@@ -189,19 +189,31 @@
 						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
 						<threshold>3.5</threshold>
 						<label>#2/4 Strange device study report</label>
-						<text>Ankle monitor containment protocol\n\nAbstract:\nResearch into the monitor suggests that it can be pacified for a couple of days by placing it on a synthetic leg.\n\nObservations:\nWhile placed on a leg, it appears that the monitor does not attempt to attach to another leg. Furthermore, the mechanism that detects whether it is attached to a living leg appears to only be used when it attempts to detach. It may be possible to create a synthetic leg and place the monitor on it to contain it for a couple days. Though, once it detaches from the synthetic leg it will realize it has been fooled and incinerate the leg.\nRecommendations:\n\nThe monitor cannot be studied on the leg so it may be advantageous to keep it detached in order to study it further.</text>
+						<text>Ankle monitor shocking mechanism\n\nAbstract:\nResearch into the ankle monitor has shown that the shocking mechanism is recreatable.\n\nObservations:\nUpon attaching to a target, the ankle monitor immediately connects directly to the central nervous system. It delivers the shocks through this connection ensuring maximum effectiveness on the target.\n\nRecommendations:\nResearch into making a manmade ankle monitor could prove to be a valuable tool in preventing prison breaks.</text>
 						<ThreatClass>1</ThreatClass>
-						<ThingDefSpawn>EA_ResearchNotesSL</ThingDefSpawn>
+						<ThingDefSpawn>EA_ResearchNotesMAM</ThingDefSpawn>
 						<isSyncWithDB>true</isSyncWithDB>
 					</li>
+					
 					<li Class="AnomaliesExpected.AEStudyNote">
 						<AnomalyLabel>ankle monitor</AnomalyLabel>
 						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
 						<threshold>6.0</threshold>
 						<label>#3/4 Strange device study report</label>
-						<text>Ankle monitor shocking mechanism\n\nAbstract:\nResearch into the ankle monitor has shown that the shocking mechanism is recreatable.\n\nObservations:\nUpon attaching to a target, the ankle monitor immediately connects directly to the central nervous system. It delivers the shocks through this connection ensuring maximum effectiveness on the target.\n\nRecommendations:\nResearch into making a manmade ankle monitor could prove to be a valuable tool in preventing prison breaks.</text>
+						<text>Ankle monitor targetting mechanism\n\nAbstract:\nThe targetting system on the ankle monitor seems to be fairly rudimentary and can be easily hijacked.\n\nObservations:\nUsing a modified signal cloner, {PAWN_nameDef} was able to cause the ankle monitor to attempt to attach itself to a wooden pole. It immediately detached after it realized the pole wasn't made of human flesh. The signal appears to cause the monitor to reflexively detach from the object it is on, though it will immediately reattach if the object is valid.</text>
 						<ThreatClass>1</ThreatClass>
-						<ThingDefSpawn>EA_ResearchNotesMAM</ThingDefSpawn>
+						<ThingDefSpawn>EA_ResearchNotesMTD</ThingDefSpawn>
+						<isSyncWithDB>true</isSyncWithDB>
+					</li>
+
+					<li Class="AnomaliesExpected.AEStudyNote">
+						<AnomalyLabel>ankle monitor</AnomalyLabel>
+						<AnomalyDesc>An ankle monitor that discourages the person it is attached to from going outside by administering a painful electric shock. The shock becomes more severe the longer the subject is outside.</AnomalyDesc>
+						<threshold>7.0</threshold>
+						<label>#4/4 Strange device study report</label>
+						<text>Ankle monitor containment protocol\n\nAbstract:\nResearch into the monitor suggests that it can be pacified for a couple of days by placing it on a synthetic leg.\n\nObservations:\nWhile placed on a leg, it appears that the monitor does not attempt to attach to another leg. Furthermore, the mechanism that detects whether it is attached to a living leg appears to only be used when it attempts to detach. It may be possible to create a synthetic leg and place the monitor on it to contain it for a couple days. Though, once it detaches from the synthetic leg it will realize it has been fooled and incinerate the leg.\nRecommendations:\n\nContinuously make synthetic legs in order to keep the ankle monitor passive.</text>
+						<ThreatClass>1</ThreatClass>
+						<ThingDefSpawn>EA_ResearchNotesSL</ThingDefSpawn>
 						<isSyncWithDB>true</isSyncWithDB>
 					</li>
 				</studyNotes>

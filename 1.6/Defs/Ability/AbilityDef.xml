@@ -1,0 +1,21 @@
+<Defs>
+    <AbilityDef>
+        <defName>EASendMonitor</defName>
+        <label>send ankle monitor</label>
+        <description>Send the signal to an ankle monitor to attach to a specific person.</description>
+        <iconPath>UI/Commands/CallMechanoids</iconPath>
+        <cooldownTicksRange>15000</cooldownTicksRange> <!-- 6 hours -->
+        <displayOrder>300</displayOrder>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <range>500</range>
+        <warmupTime>0.5</warmupTime>
+        <useableInPocketMaps>true</useableInPocketMaps>
+        <targetParams Class = "ExtraAnomalies.AnkleMonitorTargetingParameters"></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ExtraAnomalies.CompProperties_SendAnkleMonitor"></li>
+        </comps>
+    </AbilityDef>
+</Defs>

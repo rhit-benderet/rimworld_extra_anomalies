@@ -12,7 +12,15 @@ namespace ExtraAnomalies
         {
             base.CompPostTick(ref severityAdjustment);
             Pawn pawn = this.parent.pawn;
+            if (pawn == null)
+            {
+                return;
+            }
             Map map = pawn.Map;
+            if (map == null)
+            {
+                return;
+            }
             bool isOutdoors = pawn.GetRoom(RegionType.Set_All).TouchesMapEdge;
             float change = isOutdoors ? this.Props.severityPerHourOutside : this.Props.severityPerHourInside;
             List<Hediff> hediffs = new List<Hediff>();
