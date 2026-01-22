@@ -33,7 +33,7 @@
         </requiredAnalyzed>
         <knowledgeCost>10</knowledgeCost>
         <knowledgeCategory>Basic</knowledgeCategory>
-        <researchViewX>0</researchViewX>
+        <researchViewX>2</researchViewX>
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
@@ -50,12 +50,12 @@
         </prerequisites>
         <knowledgeCost>10</knowledgeCost>
         <knowledgeCategory>Basic</knowledgeCategory>
-        <researchViewX>2</researchViewX>
+        <researchViewX>0</researchViewX>
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef>
-        <defName>EA_AnkleMonitorTargetterResearch</defName>
+        <defName>EA_AnkleMonitorTargeterResearch</defName>
         <label>ankle monitor targetting device</label>
         <description>Learn how to spoof the targetting for an ankle monitor. This will allow you to command an ankle monitor to attach to a certain person.</description>
         <tab>ExtraAnomalies</tab>

@@ -234,9 +234,9 @@
         <defName>Hediff_EAAnkleMonitorManmade</defName>
 		<label>manmade ankle monitor</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>An ankle monitor.</description>
+		<description>A manmade ankle monitor.</description>
 		<everCurableByItem>false</everCurableByItem>
-		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+		<keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
 		<isBad>true</isBad>
 		<comps>
 			<li Class="ExtraAnomalies.HediffCompProperties_DiscourageTouchingGrass">
@@ -244,9 +244,6 @@
 				<severityPerHourInside>-16.0</severityPerHourInside>
 				<maxSeverity>5.0</maxSeverity>
 				<hediffDef>Hediff_EAElectricShock</hediffDef>
-			</li>
-			<li Class="ExtraAnomalies.HediffCompProperties_DetachAfterDeath">
-				<spawnedItem>EA_AnkleMonitorManmade</spawnedItem>
 			</li>
 		</comps>
 	</HediffDef>

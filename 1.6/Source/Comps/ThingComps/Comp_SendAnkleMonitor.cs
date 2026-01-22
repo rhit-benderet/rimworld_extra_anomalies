@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace ExtraAnomalies
@@ -50,6 +51,8 @@ namespace ExtraAnomalies
 			}
 			pawn.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
 			monitor.SplitOff(1).Destroy(DestroyMode.Vanish);
+			Faction factionToInform = pawn.Faction;
+			Faction.OfPlayer.TryAffectGoodwillWith(factionToInform, -40, true, !factionToInform.temporary, HistoryEventDefOf.AttackedMember, new GlobalTargetInfo?(pawn));
 			Effecter effecter = EAEffects_Def.EA_AttachEffect.Spawn();
 			effecter.Trigger(new TargetInfo(target.Cell, this.parent.pawn.MapHeld, false), new TargetInfo(target.Cell, this.parent.pawn.MapHeld, false), -1);
 			effecter.Cleanup();

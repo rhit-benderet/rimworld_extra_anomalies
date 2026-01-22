@@ -102,7 +102,7 @@
 	<ThingDef>
 		<defName>EA_AnkleMonitorManmade</defName>
 		<label>manmade ankle monitor</label>
-		<description>A manmade ankle monitor for keeping people indoors.</description>
+		<description>A manmade ankle monitor for keeping people indoors. The spikes that deliver the shock ensure that the only way to remove it is to remove the leg.</description>
 		<category>Item</category>
 		<thingClass>ThingWithComps</thingClass>
 		<genericMarketSellable>false</genericMarketSellable>
@@ -118,7 +118,7 @@
 		<pathCost>14</pathCost>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Things/Item/Special/EA_AnkleMonitor</texPath>
+			<texPath>Things/Item/Misc/EA_AnkleMonitorManmade</texPath>
 		</graphicData>
 		<statBases>
 			<Mass>1</Mass>
@@ -166,7 +166,7 @@
 		</recipeMaker>
 	</ThingDef>
 	<ThingDef ParentName="ApparelNoQualityBase">
-		<defName>EA_AnkleMonitorTargetter</defName>
+		<defName>EA_AnkleMonitorTargeter</defName>
 		<label>ankle monitor targetting device</label>
 		<description>A device that lets you trigger the ankle monitor to attach to someone.</description>
 		<category>Item</category>
@@ -184,7 +184,7 @@
 		<pathCost>14</pathCost>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Things/Item/Special/EA_AnkleMonitorTargetter</texPath>
+			<texPath>Things/Item/Misc/EA_AnkleMonitorTargeter</texPath>
 		</graphicData>
 		<statBases>
 			<Mass>1</Mass>
@@ -227,7 +227,7 @@
 			<recipeUsers>
 				<li>BioferriteShaper</li>
 			</recipeUsers>
-			<researchPrerequisite>EA_AnkleMonitorTargetterResearch</researchPrerequisite>
+			<researchPrerequisite>EA_AnkleMonitorTargeterResearch</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
