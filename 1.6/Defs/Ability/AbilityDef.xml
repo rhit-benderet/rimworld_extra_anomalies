@@ -3,7 +3,7 @@
         <defName>EASendMonitor</defName>
         <label>send ankle monitor</label>
         <description>Send the signal to an ankle monitor to attach to a specific person.</description>
-        <iconPath>UI/Commands/CallMechanoids</iconPath>
+        <iconPath>UI/CodexEntries/EA_AnkleMonitor</iconPath>
         <cooldownTicksRange>15000</cooldownTicksRange> <!-- 6 hours -->
         <displayOrder>300</displayOrder>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
