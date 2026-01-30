@@ -54,10 +54,19 @@ namespace ExtraAnomalies
         private void AttachTo(Pawn pawn)
         {
             string objectname = this.parent.GetCustomLabelNoCount();
+            Thing monitor = this.parent;
             SendLetterForAttach(pawn.NameShortColored, pawn, objectname);
-            this.parent.Destroy(DestroyMode.Vanish);
             List<BodyPartRecord> legs = pawn.health.hediffSet.GetNotMissingParts().Where(x => x.def == BodyPartDefOf.Leg).ToList();
-			pawn.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			Hediff hediff_monitor = pawn.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			if (hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>() != null)
+			{
+				if (monitor.TryGetComp<CompStudiable>() != null)
+				{
+					CompStudiable comp = monitor.TryGetComp<CompStudiable>();
+					hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>().studyAmount = comp.anomalyKnowledgeGained;
+				}
+			}
+            this.parent.Destroy(DestroyMode.Vanish);
         }
         public static void SendLetterForAttach(NamedArgument attacheeName, Thing attachee, NamedArgument monitor)
         {

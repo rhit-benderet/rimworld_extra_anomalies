@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -73,7 +74,16 @@ namespace ExtraAnomalies
 			{
 				return;
 			}
-			this.Attachee.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			Hediff hediff_monitor = this.Attachee.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			Thing monitor = this.Item;
+			if (hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>() != null)
+			{
+				if (monitor.TryGetComp<CompStudiable>() != null)
+				{
+					CompStudiable comp = monitor.TryGetComp<CompStudiable>();
+					hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>().studyAmount = comp.anomalyKnowledgeGained;
+				}
+			}
 			this.Item.SplitOff(1).Destroy(DestroyMode.Vanish);
 		}
 		private Mote warmupMote;

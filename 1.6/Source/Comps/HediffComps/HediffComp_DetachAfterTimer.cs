@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Reflection;
+using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -8,6 +10,7 @@ namespace ExtraAnomalies
     public class HediffComp_DetachAfterTimer : HediffComp
     {
         public float timeOnPawn;
+        public float studyAmount;
         public HediffCompProperties_DetachAfterTimer Props => (HediffCompProperties_DetachAfterTimer)this.props;
         
         private float TicksToDetach => this.Props.daysToDetach * 60000f;
@@ -19,10 +22,16 @@ namespace ExtraAnomalies
                 this.timeOnPawn += 250f;
                 if (this.timeOnPawn >= TicksToDetach)
                 {
-                    this.parent.pawn.health.RemoveHediff(this.parent);
                     Map map = this.parent.pawn.Map;
                     Thing thing = ThingMaker.MakeThing(this.Props.spawnedItem);
+                    if (thing.HasComp<CompStudiable>())
+                    {
+                        CompStudiable comp = thing.TryGetComp<CompStudiable>();
+                        comp.anomalyKnowledgeGained = this.studyAmount;
+                    }
+                    this.parent.pawn.health.RemoveHediff(this.parent);
                     GenSpawn.Spawn(thing, this.parent.pawn.Position, map, WipeMode.Vanish);
+
                 }
             }
         }
@@ -31,6 +40,7 @@ namespace ExtraAnomalies
         {
             base.CompExposeData();
             Scribe_Values.Look(ref this.timeOnPawn, "timeOnPawn", 0f);
+            Scribe_Values.Look(ref this.studyAmount, "studyAmount", 0f);
         }
         private int TicksUntilDetach
         {

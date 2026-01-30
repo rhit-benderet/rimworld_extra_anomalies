@@ -49,7 +49,15 @@ namespace ExtraAnomalies
 			{
 				return;
 			}
-			pawn.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			Hediff hediff_monitor = pawn.health.AddHediff(EAHediff_Def.Hediff_EAAnkleMonitor, legs.RandomElement());
+			if (hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>() != null)
+			{
+				if (monitor.TryGetComp<CompStudiable>() != null)
+				{
+					CompStudiable comp = monitor.TryGetComp<CompStudiable>();
+					hediff_monitor.TryGetComp<HediffComp_DetachAfterTimer>().studyAmount = comp.anomalyKnowledgeGained;
+				}
+			}
 			monitor.SplitOff(1).Destroy(DestroyMode.Vanish);
 			Faction factionToInform = pawn.Faction;
 			Faction.OfPlayer.TryAffectGoodwillWith(factionToInform, -40, true, !factionToInform.temporary, HistoryEventDefOf.AttackedMember, new GlobalTargetInfo?(pawn));
